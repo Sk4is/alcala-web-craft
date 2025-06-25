@@ -1,13 +1,14 @@
 
 import React, { useState, useEffect } from 'react';
 import { Phone, Mail, MapPin, Menu, X, ChevronDown, Star, CheckCircle, ArrowRight, Clock, Shield, Zap } from 'lucide-react';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 const Index = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isNegociosOpen, setIsNegociosOpen] = useState(false);
 
-  // Cerrar menú móvil con Escape
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
@@ -35,207 +36,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-white font-inter">
       {/* Header */}
-      <header className="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            {/* Logo */}
-            <div className="flex-shrink-0">
-              <a href="/" className="text-2xl font-bold text-primary-600 hover:text-primary-700 transition-colors duration-200">
-                DisWeb<span className="text-accent-500">Alcalá</span>
-              </a>
-            </div>
-
-            {/* Desktop Navigation */}
-            <nav className="hidden md:flex space-x-8" role="navigation" aria-label="Navegación principal">
-              <a href="/" className="text-gray-700 hover:text-primary-600 px-3 py-2 text-sm font-medium transition-colors duration-200">
-                Inicio
-              </a>
-              
-              {/* Servicios Dropdown */}
-              <div className="relative">
-                <button
-                  onClick={toggleServices}
-                  onKeyDown={(e) => e.key === 'Enter' && toggleServices()}
-                  className="text-gray-700 hover:text-primary-600 px-3 py-2 text-sm font-medium flex items-center transition-colors duration-200"
-                  aria-expanded={isServicesOpen}
-                  aria-haspopup="true"
-                >
-                  Servicios <ChevronDown className="ml-1 h-4 w-4" />
-                </button>
-                
-                {isServicesOpen && (
-                  <div className="absolute top-full left-0 mt-1 w-64 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 z-50">
-                    <div className="py-1" role="menu">
-                      <a href="/desarrollo-web-alcala-de-henares.html" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary-600 transition-colors duration-200" role="menuitem">
-                        Desarrollo Web
-                      </a>
-                      <a href="/tiendas-online-alcala-de-henares.html" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary-600 transition-colors duration-200" role="menuitem">
-                        Tiendas Online
-                      </a>
-                      <a href="/posicionamiento-seo-local-alcala-de-henares.html" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary-600 transition-colors duration-200" role="menuitem">
-                        SEO Local
-                      </a>
-                      <a href="/mantenimiento-web-alcala-de-henares.html" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary-600 transition-colors duration-200" role="menuitem">
-                        Mantenimiento Web
-                      </a>
-                    </div>
-                  </div>
-                )}
-              </div>
-
-              {/* Para Negocios Dropdown */}
-              <div className="relative">
-                <button
-                  onClick={toggleNegocios}
-                  onKeyDown={(e) => e.key === 'Enter' && toggleNegocios()}
-                  className="text-gray-700 hover:text-primary-600 px-3 py-2 text-sm font-medium flex items-center transition-colors duration-200"
-                  aria-expanded={isNegociosOpen}
-                  aria-haspopup="true"
-                >
-                  Para Negocios <ChevronDown className="ml-1 h-4 w-4" />
-                </button>
-                
-                {isNegociosOpen && (
-                  <div className="absolute top-full left-0 mt-1 w-64 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 z-50">
-                    <div className="py-1" role="menu">
-                      <a href="/diseno-web-gimnasios-alcala-de-henares.html" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary-600 transition-colors duration-200" role="menuitem">
-                        Gimnasios y Fitness
-                      </a>
-                      <a href="/diseno-web-restaurantes-alcala-de-henares.html" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary-600 transition-colors duration-200" role="menuitem">
-                        Restaurantes y Bares
-                      </a>
-                      <a href="/diseno-web-dentistas-alcala-de-henares.html" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary-600 transition-colors duration-200" role="menuitem">
-                        Clínicas Dentales
-                      </a>
-                      <a href="/diseno-web-hoteles-alcala-de-henares.html" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary-600 transition-colors duration-200" role="menuitem">
-                        Hoteles y Turismo
-                      </a>
-                      <a href="/diseno-web-clinicas-medicos-alcala-de-henares.html" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary-600 transition-colors duration-200" role="menuitem">
-                        Clínicas Médicas
-                      </a>
-                      <a href="/diseno-web-abogados-alcala-de-henares.html" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary-600 transition-colors duration-200" role="menuitem">
-                        Despachos de Abogados
-                      </a>
-                    </div>
-                  </div>
-                )}
-              </div>
-
-              <a href="/blog" className="text-gray-700 hover:text-primary-600 px-3 py-2 text-sm font-medium transition-colors duration-200">
-                Blog
-              </a>
-              <a href="/contacto" className="text-gray-700 hover:text-primary-600 px-3 py-2 text-sm font-medium transition-colors duration-200">
-                Contacto
-              </a>
-            </nav>
-
-            {/* CTA Button Desktop */}
-            <div className="hidden md:flex">
-              <a
-                href="/contacto"
-                className="bg-primary-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-primary-700 transition-all duration-200 hover:shadow-lg focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
-                aria-label="Solicitar consulta gratuita sobre diseño web"
-              >
-                Consulta Gratuita
-              </a>
-            </div>
-
-            {/* Mobile menu button */}
-            <div className="md:hidden">
-              <button
-                onClick={toggleMenu}
-                className="text-gray-700 hover:text-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 p-2"
-                aria-label={isMenuOpen ? "Cerrar menú de navegación" : "Abrir menú de navegación"}
-                aria-expanded={isMenuOpen}
-              >
-                {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-              </button>
-            </div>
-          </div>
-        </div>
-
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="md:hidden bg-white border-t border-gray-200 shadow-lg">
-            <div className="px-2 pt-2 pb-3 space-y-1">
-              <a href="/" className="block px-3 py-2 text-gray-700 hover:text-primary-600 hover:bg-gray-50 rounded-md transition-colors duration-200">
-                Inicio
-              </a>
-              <div className="space-y-1">
-                <button
-                  onClick={toggleServices}
-                  className="w-full text-left px-3 py-2 text-gray-700 hover:text-primary-600 hover:bg-gray-50 rounded-md flex items-center justify-between transition-colors duration-200"
-                  aria-expanded={isServicesOpen}
-                >
-                  Servicios <ChevronDown className="h-4 w-4" />
-                </button>
-                {isServicesOpen && (
-                  <div className="pl-6 space-y-1">
-                    <a href="/desarrollo-web-alcala-de-henares.html" className="block px-3 py-2 text-sm text-gray-600 hover:text-primary-600 hover:bg-gray-50 rounded-md">
-                      Desarrollo Web
-                    </a>
-                    <a href="/tiendas-online-alcala-de-henares.html" className="block px-3 py-2 text-sm text-gray-600 hover:text-primary-600 hover:bg-gray-50 rounded-md">
-                      Tiendas Online
-                    </a>
-                    <a href="/posicionamiento-seo-local-alcala-de-henares.html" className="block px-3 py-2 text-sm text-gray-600 hover:text-primary-600 hover:bg-gray-50 rounded-md">
-                      SEO Local
-                    </a>
-                    <a href="/mantenimiento-web-alcala-de-henares.html" className="block px-3 py-2 text-sm text-gray-600 hover:text-primary-600 hover:bg-gray-50 rounded-md">
-                      Mantenimiento Web
-                    </a>
-                  </div>
-                )}
-              </div>
-              <div className="space-y-1">
-                <button
-                  onClick={toggleNegocios}
-                  className="w-full text-left px-3 py-2 text-gray-700 hover:text-primary-600 hover:bg-gray-50 rounded-md flex items-center justify-between transition-colors duration-200"
-                  aria-expanded={isNegociosOpen}
-                >
-                  Para Negocios <ChevronDown className="h-4 w-4" />
-                </button>
-                {isNegociosOpen && (
-                  <div className="pl-6 space-y-1">
-                    <a href="/diseno-web-gimnasios-alcala-de-henares.html" className="block px-3 py-2 text-sm text-gray-600 hover:text-primary-600 hover:bg-gray-50 rounded-md">
-                      Gimnasios
-                    </a>
-                    <a href="/diseno-web-restaurantes-alcala-de-henares.html" className="block px-3 py-2 text-sm text-gray-600 hover:text-primary-600 hover:bg-gray-50 rounded-md">
-                      Restaurantes
-                    </a>
-                    <a href="/diseno-web-dentistas-alcala-de-henares.html" className="block px-3 py-2 text-sm text-gray-600 hover:text-primary-600 hover:bg-gray-50 rounded-md">
-                      Dentistas
-                    </a>
-                    <a href="/diseno-web-hoteles-alcala-de-henares.html" className="block px-3 py-2 text-sm text-gray-600 hover:text-primary-600 hover:bg-gray-50 rounded-md">
-                      Hoteles
-                    </a>
-                    <a href="/diseno-web-clinicas-medicos-alcala-de-henares.html" className="block px-3 py-2 text-sm text-gray-600 hover:text-primary-600 hover:bg-gray-50 rounded-md">
-                      Clínicas
-                    </a>
-                    <a href="/diseno-web-abogados-alcala-de-henares.html" className="block px-3 py-2 text-sm text-gray-600 hover:text-primary-600 hover:bg-gray-50 rounded-md">
-                      Abogados
-                    </a>
-                  </div>
-                )}
-              </div>
-              <a href="/blog" className="block px-3 py-2 text-gray-700 hover:text-primary-600 hover:bg-gray-50 rounded-md transition-colors duration-200">
-                Blog
-              </a>
-              <a href="/contacto" className="block px-3 py-2 text-gray-700 hover:text-primary-600 hover:bg-gray-50 rounded-md transition-colors duration-200">
-                Contacto
-              </a>
-              <div className="pt-2">
-                <a
-                  href="/contacto"
-                  className="block w-full text-center bg-primary-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-primary-700 transition-all duration-200"
-                  aria-label="Solicitar consulta gratuita sobre diseño web"
-                >
-                  Consulta Gratuita
-                </a>
-              </div>
-            </div>
-          </div>
-        )}
-      </header>
+      <Header />
 
       {/* Main Content */}
       <main>
@@ -259,14 +60,6 @@ const Index = () => {
                   >
                     Presupuesto Gratuito
                     <ArrowRight className="ml-2 h-5 w-5" />
-                  </a>
-                  <a
-                    href="tel:+34918234567"
-                    className="border-2 border-primary-600 text-primary-600 px-8 py-4 rounded-lg font-semibold hover:bg-primary-600 hover:text-white transition-all duration-200 inline-flex items-center justify-center"
-                    aria-label="Llamar ahora al teléfono +34 918 234 567"
-                  >
-                    <Phone className="mr-2 h-5 w-5" />
-                    Llama Ahora
                   </a>
                 </div>
                 <div className="mt-8 flex items-center space-x-4 text-sm text-gray-600">
@@ -425,14 +218,14 @@ const Index = () => {
                   <div className="w-6 h-6 bg-purple-600 rounded"></div>
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  <a href="/mantenimiento-web-alcala-de-henares.html" className="hover:text-primary-600 transition-colors duration-200">
+                  <a href="/diseno-web-mantenimiento-alcala-de-henares.html" className="hover:text-primary-600 transition-colors duration-200">
                     Mantenimiento Web
                   </a>
                 </h3>
                 <p className="text-gray-600 text-sm mb-4">
                   Mantén tu web actualizada, segura y funcionando perfectamente con nuestro servicio de mantenimiento.
                 </p>
-                <a href="/mantenimiento-web-alcala-de-henares.html" className="text-primary-600 font-medium text-sm hover:text-primary-700 inline-flex items-center">
+                <a href="/diseno-web-mantenimiento-alcala-de-henares.html" className="text-primary-600 font-medium text-sm hover:text-primary-700 inline-flex items-center">
                   Más información <ArrowRight className="ml-1 h-4 w-4" />
                 </a>
               </div>
@@ -526,14 +319,14 @@ const Index = () => {
                   <div className="w-6 h-6 bg-purple-600 rounded-full"></div>
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  <a href="/diseno-web-clinicas-medicos-alcala-de-henares.html" className="hover:text-primary-600 transition-colors duration-200">
+                  <a href="/diseno-web-clinicas-alcala-de-henares.html" className="hover:text-primary-600 transition-colors duration-200">
                     Clínicas Médicas
                   </a>
                 </h3>
                 <p className="text-gray-600 text-sm mb-4">
                   Webs sanitarias con cita previa, especialidades médicas, equipo profesional y cumplimiento normativo.
                 </p>
-                <a href="/diseno-web-clinicas-medicos-alcala-de-henares.html" className="text-primary-600 font-medium text-sm hover:text-primary-700 inline-flex items-center">
+                <a href="/diseno-web-clinicas-alcala-de-henares.html" className="text-primary-600 font-medium text-sm hover:text-primary-700 inline-flex items-center">
                   Ver más <ArrowRight className="ml-1 h-4 w-4" />
                 </a>
               </div>
@@ -830,14 +623,6 @@ const Index = () => {
                 Solicitar Presupuesto Gratuito
                 <ArrowRight className="ml-2 h-5 w-5" />
               </a>
-              <a
-                href="tel:+34918234567"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-all duration-200 inline-flex items-center justify-center"
-                aria-label="Llamar ahora al +34 918 234 567"
-              >
-                <Phone className="mr-2 h-5 w-5" />
-                +34 918 234 567
-              </a>
             </div>
             <p className="mt-6 text-primary-100 text-sm">
               Consulta gratuita sin compromiso • Atención personalizada • Soporte local en Alcalá de Henares
@@ -847,142 +632,7 @@ const Index = () => {
       </main>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-gray-300">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="grid md:grid-cols-4 gap-8">
-            {/* Información de la empresa */}
-            <div>
-              <div className="text-2xl font-bold text-white mb-4">
-                DisWeb<span className="text-accent-500">Alcalá</span>
-              </div>
-              <p className="text-gray-400 mb-4">
-                Agencia de diseño web profesional en Alcalá de Henares. Creamos páginas web que convierten visitantes en clientes.
-              </p>
-              <div className="space-y-2">
-                <div className="flex items-center">
-                  <MapPin className="h-4 w-4 mr-2 text-accent-500" />
-                  <span className="text-sm">Calle Mayor, 45 - Alcalá de Henares</span>
-                </div>
-                <div className="flex items-center">
-                  <Phone className="h-4 w-4 mr-2 text-accent-500" />
-                  <a href="tel:+34918234567" className="text-sm hover:text-white transition-colors">
-                    +34 918 234 567
-                  </a>
-                </div>
-                <div className="flex items-center">
-                  <Mail className="h-4 w-4 mr-2 text-accent-500" />
-                  <a href="mailto:info@disenowebalcaladehenares.es" className="text-sm hover:text-white transition-colors">
-                    info@disenowebalcaladehenares.es
-                  </a>
-                </div>
-              </div>
-            </div>
-            
-            {/* Servicios */}
-            <div>
-              <h4 className="text-white font-semibold mb-4">Nuestros Servicios</h4>
-              <ul className="space-y-2">
-                <li>
-                  <a href="/desarrollo-web-alcala-de-henares.html" className="text-sm hover:text-white transition-colors">
-                    Desarrollo Web
-                  </a>
-                </li>
-                <li>
-                  <a href="/tiendas-online-alcala-de-henares.html" className="text-sm hover:text-white transition-colors">
-                    Tiendas Online
-                  </a>
-                </li>
-                <li>
-                  <a href="/posicionamiento-seo-local-alcala-de-henares.html" className="text-sm hover:text-white transition-colors">
-                    SEO Local
-                  </a>
-                </li>
-                <li>
-                  <a href="/mantenimiento-web-alcala-de-henares.html" className="text-sm hover:text-white transition-colors">
-                    Mantenimiento Web
-                  </a>
-                </li>
-              </ul>
-            </div>
-            
-            {/* Sectores */}
-            <div>
-              <h4 className="text-white font-semibold mb-4">Sectores Especializados</h4>
-              <ul className="space-y-2">
-                <li>
-                  <a href="/diseno-web-gimnasios-alcala-de-henares.html" className="text-sm hover:text-white transition-colors">
-                    Gimnasios y Fitness
-                  </a>
-                </li>
-                <li>
-                  <a href="/diseno-web-restaurantes-alcala-de-henares.html" className="text-sm hover:text-white transition-colors">
-                    Restaurantes
-                  </a>
-                </li>
-                <li>
-                  <a href="/diseno-web-dentistas-alcala-de-henares.html" className="text-sm hover:text-white transition-colors">
-                    Clínicas Dentales
-                  </a>
-                </li>
-                <li>
-                  <a href="/diseno-web-hoteles-alcala-de-henares.html" className="text-sm hover:text-white transition-colors">
-                    Hoteles
-                  </a>
-                </li>
-                <li>
-                  <a href="/diseno-web-clinicas-medicos-alcala-de-henares.html" className="text-sm hover:text-white transition-colors">
-                    Clínicas Médicas
-                  </a>
-                </li>
-                <li>
-                  <a href="/diseno-web-abogados-alcala-de-henares.html" className="text-sm hover:text-white transition-colors">
-                    Abogados
-                  </a>
-                </li>
-              </ul>
-            </div>
-            
-            {/* Enlaces útiles */}
-            <div>
-              <h4 className="text-white font-semibold mb-4">Enlaces Útiles</h4>
-              <ul className="space-y-2">
-                <li>
-                  <a href="/blog" className="text-sm hover:text-white transition-colors">
-                    Blog
-                  </a>
-                </li>
-                <li>
-                  <a href="/contacto" className="text-sm hover:text-white transition-colors">
-                    Contacto
-                  </a>
-                </li>
-                <li>
-                  <a href="/aviso-legal" className="text-sm hover:text-white transition-colors">
-                    Aviso Legal
-                  </a>
-                </li>
-                <li>
-                  <a href="/politica-privacidad" className="text-sm hover:text-white transition-colors">
-                    Política de Privacidad
-                  </a>
-                </li>
-                <li>
-                  <a href="/politica-cookies" className="text-sm hover:text-white transition-colors">
-                    Política de Cookies
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-            <p className="text-sm text-gray-400">
-              © 2025 Diseño Web Alcalá de Henares. Todos los derechos reservados. 
-              Diseño web profesional en Alcalá de Henares para hacer crecer tu negocio online.
-            </p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };

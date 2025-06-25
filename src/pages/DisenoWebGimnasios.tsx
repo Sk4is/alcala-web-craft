@@ -5,41 +5,70 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { CheckCircle, Star, ArrowRight, Zap, Users, Calendar } from "lucide-react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const DisenoWebGimnasios = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
-      {/* Navigation */}
-      <nav className="bg-white shadow-md sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="font-bold text-xl text-primary-600">
-              <a href="/" aria-label="Volver a la página principal">DiseñoWebAlcala.es</a>
+      <Header />
+
+      {/* Hero Section */}
+      <section className="pt-24 pb-16 bg-gradient-to-br from-fuchsia-100 to-pink-100">
+        <div className="max-w-[1250px] mx-auto px-6 md:px-12 lg:px-20">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h1 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6 leading-tight">
+                Diseño Web para <span className="text-fuchsia-600">Gimnasios</span> en Alcalá de Henares
+              </h1>
+              <p className="text-xl text-slate-600 mb-8 leading-relaxed">
+                Capta más socios y moderniza tu presencia online con una web fitness profesional, rápida y accesible.
+                Especialistas en páginas web para centros deportivos en Alcalá de Henares.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a 
+                  href="#contacto" 
+                  className="bg-fuchsia-600 text-white px-8 py-4 rounded-xl font-semibold hover:bg-fuchsia-700 transition-all duration-300 shadow-lg text-center"
+                >
+                  Solicita tu web fitness
+                </a>
+              </div>
             </div>
-            <div className="hidden md:block">
-              <Button asChild variant="default">
-                <a href="/contacto">Contactar ahora</a>
-              </Button>
+            <div className="relative">
+              <div className="bg-white rounded-2xl shadow-2xl p-8">
+                <div className="flex items-center mb-6">
+                  <svg
+                    className="h-8 w-8 text-fuchsia-600 mr-3"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M12 21C12 21 4 13.5 4 8C4 5.23858 6.23858 3 9 3C10.6569 3 12 4.34315 12 6C12 4.34315 13.3431 3 15 3C17.7614 3 20 5.23858 20 8C20 13.5 12 21 12 21Z" />
+                  </svg>
+                  <h3 className="text-xl font-bold text-slate-900">
+                    Centro Fitness
+                  </h3>
+                </div>
+                <div className="space-y-4">
+                  <div className="flex justify-between items-center p-3 bg-pink-50 rounded-lg">
+                    <span className="text-slate-700">Nuevos socios</span>
+                    <span className="font-bold text-fuchsia-600">+120%</span>
+                  </div>
+                  <div className="flex justify-between items-center p-3 bg-green-50 rounded-lg">
+                    <span className="text-slate-700">Reservas online</span>
+                    <span className="font-bold text-green-600">90%</span>
+                  </div>
+                  <div className="flex justify-between items-center p-3 bg-yellow-50 rounded-lg">
+                    <span className="text-slate-700">Valoración media</span>
+                    <span className="font-bold text-yellow-600">4.8/5</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </nav>
-
-      {/* Header Section */}
-      <header className="bg-gradient-to-r from-primary-600 to-primary-800 text-white py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-            Diseño web profesional para gimnasios en Alcalá de Henares
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 opacity-90 leading-relaxed">
-            Atrae más socios con una página web rápida, accesible y optimizada para reservas online. 
-            Especialistas en webs para centros de fitness en Alcalá de Henares.
-          </p>
-          <Button size="lg" className="bg-accent-500 hover:bg-accent-600 text-white px-8 py-3 text-lg">
-            <a href="#contacto">Solicita tu web para gimnasio</a>
-          </Button>
-        </div>
-      </header>
+      </section>
 
       <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Introduction */}
@@ -586,11 +615,6 @@ const DisenoWebGimnasios = () => {
             presencia digital profesional, rápida y accesible que trabaje por ti las 24 horas del día.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-accent-500 hover:bg-accent-600 text-white px-8 py-3">
-              <a href="tel:+34918234567" aria-label="Llamar para solicitar presupuesto">
-                Llamar ahora: 918 234 567
-              </a>
-            </Button>
             <Button size="lg" variant="outline" className="bg-white text-primary-700 hover:bg-gray-100 px-8 py-3">
               <a href="mailto:info@disenowebalcaladehenares.es" aria-label="Enviar email para consulta">
                 Solicitar presupuesto gratuito
@@ -600,39 +624,7 @@ const DisenoWebGimnasios = () => {
         </section>
       </main>
 
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-8">
-            <div>
-              <h3 className="text-xl font-bold mb-4">DiseñoWebAlcala.es</h3>
-              <p className="text-gray-300">
-                Especialistas en diseño web para gimnasios en Alcalá de Henares. 
-                Webs rápidas, accesibles y optimizadas para atraer más socios.
-              </p>
-            </div>
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Contacto</h4>
-              <div className="space-y-2 text-gray-300">
-                <p>📞 918 234 567</p>
-                <p>✉️ info@disenowebalcaladehenares.es</p>
-                <p>📍 Calle Mayor, 45 - Alcalá de Henares</p>
-              </div>
-            </div>
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Servicios</h4>
-              <ul className="space-y-2 text-gray-300">
-                <li><a href="/diseno-web-restaurantes-alcala-de-henares" className="hover:text-white">Webs para restaurantes</a></li>
-                <li><a href="/diseno-web-dentistas-alcala-de-henares" className="hover:text-white">Webs para dentistas</a></li>
-                <li><a href="/diseno-web-abogados-alcala-de-henares" className="hover:text-white">Webs para abogados</a></li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 DiseñoWebAlcala.es - Todos los derechos reservados</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
