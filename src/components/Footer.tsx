@@ -137,8 +137,8 @@ const Footer = () => {
 
             <div className="mt-6">
               <a
-                href="/contacto"
-                className="text-white px-6 py-2 rounded-lg font-medium transition-all duration-300 bg-gradient-to-r from-[#8CC63F] to-[#6B9C2E] hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-[#8CC63F] focus:ring-offset-2 focus:ring-offset-slate-900"
+                href="/contacto-alcala-de-henares.html"
+                className="text-white px-6 py-2 rounded-lg font-medium transition-all duration-300 bg-gradient-to-r from-blue-600 to-blue-700 hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-[#8CC63F] focus:ring-offset-2 focus:ring-offset-slate-900"
               >
                 Contactar Ahora
               </a>

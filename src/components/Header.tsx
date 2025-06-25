@@ -164,7 +164,7 @@ const Header: React.FC = () => {
             </div>
 
             <a
-              href="/contacto-alcala-de-henares.html.html"
+              href="/contacto-alcala-de-henares.html"
               className="text-slate-700 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-500"
             >
               Contacto
@@ -174,8 +174,8 @@ const Header: React.FC = () => {
           {/* CTA Button Desktop */}
           <div className="hidden md:flex">
             <a
-              href="/contacto-alcala-de-henares.html.html"
-              className="text-white px-6 py-2 rounded-lg font-medium transition-all duration-300 bg-gradient-to-r from-[#8CC63F] to-[#6B9C2E] hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-[#8CC63F] focus:ring-offset-2"
+              href="/contacto-alcala-de-henares.html"
+              className="text-white px-6 py-2 rounded-lg font-medium transition-all duration-300 bg-gradient-to-r from-blue-600 to-blue-700 hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-[#8CC63F] focus:ring-offset-2"
             >
               Presupuesto Gratis
             </a>
@@ -242,14 +242,14 @@ const Header: React.FC = () => {
               </a>
             ))}
             <a
-              href="/contacto-alcala-de-henares.html.html"
+              href="/contacto-alcala-de-henares.html"
               className="block px-3 py-2 text-slate-700 hover:text-indigo-600 hover:bg-slate-50 rounded-md text-base font-medium transition-colors duration-200"
             >
               Contacto
             </a>
             <div className="px-3 py-4">
               <a
-                href="/contacto-alcala-de-henares.html.html"
+                href="/contacto-alcala-de-henares.html"
                 className="block w-full text-center bg-indigo-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-indigo-700 transition-colors duration-200"
               >
                 Presupuesto Gratis

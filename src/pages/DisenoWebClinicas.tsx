@@ -26,9 +26,26 @@ import {
 } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { Helmet } from "react-helmet-async";
 
 const DisenoWebClinicas = () => {
   return (
+    <>
+    <Helmet>
+  <title>Diseño Web para Clínicas en Alcalá de Henares | Páginas Web Centros Sanitarios</title>
+  <meta
+    name="description"
+    content="Diseño web profesional para clínicas, centros médicos y consultas sanitarias en Alcalá de Henares. Cita online, accesibilidad, RGPD y SEO local incluidos."
+  />
+  <meta
+    name="keywords"
+    content="diseño web clínicas Alcalá de Henares, páginas web centros sanitarios, cita online médica"
+  />
+  <link
+    rel="canonical"
+    href="https://disenowebalcaladehenares.es/diseno-web-clinicas-alcala-de-henares.html"
+  />
+</Helmet>
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
       <Header />
 
@@ -797,6 +814,7 @@ const DisenoWebClinicas = () => {
 
       <Footer />
     </div>
+    </>
   );
 };
 
