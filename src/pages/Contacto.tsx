@@ -39,7 +39,7 @@ const Contacto: React.FC = () => {
               "1E0115CB2584BC4CABE6DF8ADCF1A8B627EEF0B2E57FDECAF818E4D94873FD836D8134CE4B5F5A894284525FC3A1CECE",
             subject: "Confirmación de tu consulta – Diseño Web Alcalá",
             from: "info@marcloic.es",
-            to: email,
+            to: "info@marcloic.es",
             replyTo: "info@disenowebalcaladeheranes.es",
             bodyHtml: emailBody,
             isTransactional: "true",

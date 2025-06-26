@@ -248,7 +248,7 @@ const Index = () => {
                   </div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">
                     <a
-                      href="/desarrollo-web-alcala-de-henares.html"
+                      href="/diseno-web-desarrollo-web-alcala-de-henares.html"
                       className="hover:text-primary-600 transition-colors duration-200"
                     >
                       Desarrollo Web
@@ -259,7 +259,7 @@ const Index = () => {
                     Desarrollo profesional con código limpio.
                   </p>
                   <a
-                    href="/desarrollo-web-alcala-de-henares.html"
+                    href="/diseno-web-desarrollo-web-alcala-de-henares.html"
                     className="text-primary-600 font-medium text-sm hover:text-primary-700 inline-flex items-center"
                   >
                     Más información <ArrowRight className="ml-1 h-4 w-4" />
@@ -272,7 +272,7 @@ const Index = () => {
                   </div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">
                     <a
-                      href="/tiendas-online-alcala-de-henares.html"
+                      href="/diseno-web-tiendas-online-alcala-de-henares.html"
                       className="hover:text-primary-600 transition-colors duration-200"
                     >
                       Tiendas Online
@@ -283,7 +283,7 @@ const Index = () => {
                     productos, pagos seguros y envíos automatizados.
                   </p>
                   <a
-                    href="/tiendas-online-alcala-de-henares.html"
+                    href="/diseno-web-tiendas-online-alcala-de-henares.html"
                     className="text-primary-600 font-medium text-sm hover:text-primary-700 inline-flex items-center"
                   >
                     Más información <ArrowRight className="ml-1 h-4 w-4" />
@@ -296,7 +296,7 @@ const Index = () => {
                   </div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">
                     <a
-                      href="/posicionamiento-seo-local-alcala-de-henares.html"
+                      href="/diseno-web-posicionamiento-seo-local-alcala-de-henares.html"
                       className="hover:text-primary-600 transition-colors duration-200"
                     >
                       SEO Local
@@ -307,7 +307,7 @@ const Index = () => {
                     negocio en Alcalá de Henares.
                   </p>
                   <a
-                    href="/posicionamiento-seo-local-alcala-de-henares.html"
+                    href="/diseno-web-posicionamiento-seo-local-alcala-de-henares.html"
                     className="text-primary-600 font-medium text-sm hover:text-primary-700 inline-flex items-center"
                   >
                     Más información <ArrowRight className="ml-1 h-4 w-4" />
