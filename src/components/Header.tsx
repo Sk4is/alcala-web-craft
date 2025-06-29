@@ -18,7 +18,7 @@ const Header: React.FC = () => {
               className="inline-block focus:outline-none focus:ring-0"
             >
               <img
-                src="/images/logo.jpg"
+                src="/images/logo.png"
                 alt="Diseño Web Alcalá de Henares – Logo"
                 className="h-14 w-auto max-h-16 object-contain transition-opacity duration-300 hover:opacity-90"
                 loading="lazy"

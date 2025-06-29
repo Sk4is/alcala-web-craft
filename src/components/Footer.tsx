@@ -9,7 +9,7 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <div className="mb-4">
               <img
-                src="/images/logo.jpg"
+                src="/images/logo.png"
                 alt="Diseño Web Alcalá de Henares - Logo"
                 className="h-20 w-auto object-contain transition-opacity duration-300 hover:opacity-90"
                 loading="lazy"
